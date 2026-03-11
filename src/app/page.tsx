@@ -1,32 +1,18 @@
 'use client';
 
 import { Suspense } from 'react';
+import { CustomerCard } from '../components/CustomerCard';
+import { mockCustomers, Customer } from '../data/mock-customers';
 
-// Dynamic component imports with error boundaries
 const CustomerCardDemo = () => {
-  try {
-    // Try to import CustomerCard - this will work after Exercise 3
-    const CustomerCard = require('../components/CustomerCard')?.default;
-    const mockCustomers = require('../data/mock-customers')?.mockCustomers;
-    
-    if (CustomerCard && mockCustomers?.[0]) {
-      return (
-        <div className="space-y-4">
-          <p className="text-green-600 text-sm font-medium">✅ CustomerCard implemented!</p>
-          <div className="flex flex-wrap gap-4">
-            <CustomerCard customer={mockCustomers[0]} />
-            <CustomerCard customer={mockCustomers[1]} />
-          </div>
-        </div>
-      );
-    }
-  } catch (error) {
-    // Component doesn't exist yet
-  }
-  
   return (
-    <div className="text-gray-500 text-sm">
-      After Exercise 3, your CustomerCard components will appear here showing customer information with health scores.
+    <div className="space-y-4">
+      <p className="text-green-600 text-sm font-medium">✅ CustomerCard implemented!</p>
+      <div className="flex flex-wrap gap-4">
+        {mockCustomers.map((customer: Customer) => (
+          <CustomerCard key={customer.id} customer={customer} />
+        ))}
+      </div>
     </div>
   );
 };
@@ -59,7 +45,7 @@ export default function Home() {
         <h2 className="text-xl font-semibold mb-4">Workshop Progress</h2>
         <div className="space-y-2 text-sm text-gray-600">
           <p>✅ Setup Complete - Next.js app is running</p>
-          <p className="text-gray-400">⏳ Exercise 3: CustomerCard component (implement to see here)</p>
+          <p>✅ Exercise 3: CustomerCard component</p>
           <p className="text-gray-400">⏳ Exercise 4: CustomerSelector integration</p>
           <p className="text-gray-400">⏳ Exercise 5: Domain Health widget</p>
           <p className="text-gray-400">⏳ Exercise 9: Production-ready features</p>

@@ -103,6 +103,83 @@ export const mockCustomers: Customer[] = [
     domains: ['cloudfirst.com', 'support.cloudfirst.com'],
     createdAt: '2024-01-28T15:30:00Z',
     updatedAt: '2024-01-28T15:30:00Z'
+  },
+  {
+    id: '9',
+    name: 'James Patel',
+    company: 'NexGen Software',
+    healthScore: 78,
+    email: 'james.patel@nexgen.io',
+    subscriptionTier: 'premium',
+    domains: ['nexgen.io', 'app.nexgen.io'],
+    createdAt: '2024-02-05T09:00:00Z',
+    updatedAt: '2024-02-05T09:00:00Z'
+  },
+  {
+    id: '10',
+    name: 'Sophie Turner',
+    company: 'Apex Digital',
+    healthScore: 22,
+    email: 'sturner@apexdigital.com',
+    subscriptionTier: 'basic',
+    domains: ['apexdigital.com'],
+    createdAt: '2024-02-08T11:20:00Z',
+    updatedAt: '2024-02-08T11:20:00Z'
+  },
+  {
+    id: '11',
+    name: 'Carlos Mendes',
+    company: 'BrightPath Analytics',
+    healthScore: 91,
+    email: 'carlos@brightpath.ai',
+    subscriptionTier: 'enterprise',
+    domains: ['brightpath.ai', 'dashboard.brightpath.ai', 'api.brightpath.ai'],
+    createdAt: '2024-02-10T14:45:00Z',
+    updatedAt: '2024-02-10T14:45:00Z'
+  },
+  {
+    id: '12',
+    name: 'Aisha Okafor',
+    company: 'Vertex Systems',
+    healthScore: 55,
+    email: 'aokafor@vertexsystems.net',
+    subscriptionTier: 'premium',
+    domains: ['vertexsystems.net', 'portal.vertexsystems.net'],
+    createdAt: '2024-02-12T08:30:00Z',
+    updatedAt: '2024-02-12T08:30:00Z'
+  },
+  {
+    id: '13',
+    name: 'Tom Nakamura',
+    company: 'Pulse Commerce',
+    healthScore: 67,
+    email: 'tnakamura@pulsecommerce.co',
+    subscriptionTier: 'basic',
+    domains: ['pulsecommerce.co'],
+    createdAt: '2024-02-15T10:10:00Z',
+    updatedAt: '2024-02-15T10:10:00Z'
+  },
+  {
+    id: '14',
+    name: 'Rachel Kim',
+    company: 'Horizon Labs',
+    healthScore: 84,
+    email: 'rkim@horizonlabs.tech',
+    subscriptionTier: 'enterprise',
+    domains: ['horizonlabs.tech', 'app.horizonlabs.tech', 'docs.horizonlabs.tech'],
+    createdAt: '2024-02-18T13:00:00Z',
+    updatedAt: '2024-02-18T13:00:00Z'
+  },
+  {
+    id: '15',
+    name: 'Omar Hassan',
+    company: 'SwiftScale Inc',
+    healthScore: 8,
+    email: 'omar.hassan@swiftscale.com',
+    subscriptionTier: 'basic',
+    domains: ['swiftscale.com', 'beta.swiftscale.com'],
+    createdAt: '2024-02-20T16:55:00Z',
+    updatedAt: '2024-02-20T16:55:00Z'
   }
 ];
 
