@@ -1,5 +1,5 @@
 import React from 'react';
-import { Customer } from '../data/mock-customers';
+import { Customer } from '@/data/mock-customers';
 
 export interface CustomerCardProps {
   customer: Customer;
