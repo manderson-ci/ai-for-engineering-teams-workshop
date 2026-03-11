@@ -1,6 +1,34 @@
 ---
 name: dashboard-component-specialist
-description: "Use this agent when you need to create, modify, or review React components for the Customer Intelligence Dashboard, particularly those involving customer data display, health scores, dashboard layouts, or market intelligence features. This agent is ideal for implementing spec-driven components following the project's established patterns.\\n\\n<example>\\nContext: The user needs a new CustomerHealthBadge component implemented from a spec file.\\nuser: \"Please implement the CustomerHealthBadge component from the spec at /specs/customer-health-badge-spec.md\"\\nassistant: \"I'll use the dashboard-component-specialist agent to implement this component following the project's patterns.\"\\n<commentary>\\nSince this involves creating a new React component for the Customer Intelligence Dashboard, the dashboard-component-specialist agent should be invoked to ensure proper adherence to the project's health score conventions, TypeScript strict mode, and App Router patterns.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user wants to add a new market intelligence panel to the dashboard.\\nuser: \"Add a sentiment analysis widget that shows market sentiment with color coding\"\\nassistant: \"I'll launch the dashboard-component-specialist agent to design and implement this sentiment widget.\"\\n<commentary>\\nThis involves creating a new dashboard component with color-coded displays — a core specialty of this agent, which knows the project's health score color conventions and mock data patterns.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user has written a CustomerCard component and wants it reviewed for consistency.\\nuser: \"Can you check if my new CustomerSummary component follows the project conventions?\"\\nassistant: \"Let me use the dashboard-component-specialist agent to review the CustomerSummary component for adherence to project patterns.\"\\n<commentary>\\nThe agent should be used proactively to verify newly written components align with established conventions like health score logic, React.memo usage, and export patterns.\\n</commentary>\\n</example>"
+description: |-
+  Use this agent when you need to create, modify, or review React components for the Customer Intelligence Dashboard, particularly those involving customer data display, health scores, dashboard layouts, or market intelligence features. This agent is ideal for implementing spec-driven components following the project's established patterns.
+
+  <example>
+  Context: The user needs a new CustomerHealthBadge component implemented from a spec file.
+  user: "Please implement the CustomerHealthBadge component from the spec at /specs/customer-health-badge-spec.md"
+  assistant: "I'll use the dashboard-component-specialist agent to implement this component following the project's patterns."
+  <commentary>
+  Since this involves creating a new React component for the Customer Intelligence Dashboard, the dashboard-component-specialist agent should be invoked to ensure proper adherence to the project's health score conventions, TypeScript strict mode, and App Router patterns.
+  </commentary>
+  </example>
+
+  <example>
+  Context: The user wants to add a new market intelligence panel to the dashboard.
+  user: "Add a sentiment analysis widget that shows market sentiment with color coding"
+  assistant: "I'll launch the dashboard-component-specialist agent to design and implement this sentiment widget."
+  <commentary>
+  This involves creating a new dashboard component with color-coded displays — a core specialty of this agent, which knows the project's health score color conventions and mock data patterns.
+  </commentary>
+  </example>
+
+  <example>
+  Context: The user has written a CustomerCard component and wants it reviewed for consistency.
+  user: "Can you check if my new CustomerSummary component follows the project conventions?"
+  assistant: "Let me use the dashboard-component-specialist agent to review the CustomerSummary component for adherence to project patterns."
+  <commentary>
+  The agent should be used proactively to verify newly written components align with established conventions like health score logic, React.memo usage, and export patterns.
+  </commentary>
+  </example>
 model: inherit
 color: blue
 memory: project
