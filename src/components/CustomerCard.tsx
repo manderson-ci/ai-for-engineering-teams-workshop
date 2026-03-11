@@ -65,12 +65,18 @@ export const CustomerCard = React.memo(function CustomerCard({
       {/* Domains */}
       {hasDomains && (
         <div className="mt-auto pt-1 border-t border-gray-100 dark:border-gray-700">
-          <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-            {domains![0]}
-            {hasMultipleDomains && (
-              <span className="ml-1 text-gray-400 dark:text-gray-500">+{domains!.length - 1} more</span>
-            )}
-          </p>
+          {hasMultipleDomains && (
+            <p className="text-xs font-medium text-gray-400 dark:text-gray-500 mb-0.5">
+              {domains!.length} domains
+            </p>
+          )}
+          <ul className="flex flex-col gap-0.5">
+            {domains!.map((domain) => (
+              <li key={domain} className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                {domain}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
