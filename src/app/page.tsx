@@ -481,7 +481,7 @@ export default function Home(): React.JSX.Element {
             {/* Left column: Customer Selector */}
             <section
               aria-label="Customer list"
-              className="lg:col-span-5 xl:col-span-4"
+              className="lg:col-span-7 xl:col-span-6"
             >
               <WidgetErrorBoundary widgetName="Customer Selector">
                 <Suspense fallback={<WidgetSkeleton label="customer list" />}>
@@ -494,27 +494,33 @@ export default function Home(): React.JSX.Element {
             </section>
 
             {/* Right column: Detail widgets */}
-            <div className="lg:col-span-7 xl:col-span-8 flex flex-col gap-6">
-              {/* Health Display */}
-              <WidgetErrorBoundary widgetName="Health Score">
-                <Suspense fallback={<WidgetSkeleton label="health score" />}>
-                  <CustomerHealthDisplay customer={selectedCustomer} />
-                </Suspense>
-              </WidgetErrorBoundary>
+            <div className="lg:col-span-5 xl:col-span-6 flex flex-col gap-6">
+              {selectedCustomer ? (
+                <>
+                  {/* Health Display */}
+                  <WidgetErrorBoundary widgetName="Health Score">
+                    <Suspense fallback={<WidgetSkeleton label="health score" />}>
+                      <CustomerHealthDisplay customer={selectedCustomer} />
+                    </Suspense>
+                  </WidgetErrorBoundary>
 
-              {/* Alerts Panel */}
-              <WidgetErrorBoundary widgetName="Alerts">
-                <Suspense fallback={<WidgetSkeleton label="alerts" />}>
-                  <AlertsPanel customer={selectedCustomer} />
-                </Suspense>
-              </WidgetErrorBoundary>
+                  {/* Alerts Panel */}
+                  <WidgetErrorBoundary widgetName="Alerts">
+                    <Suspense fallback={<WidgetSkeleton label="alerts" />}>
+                      <AlertsPanel customer={selectedCustomer} />
+                    </Suspense>
+                  </WidgetErrorBoundary>
 
-              {/* Predictive Intelligence */}
-              <WidgetErrorBoundary widgetName="Predictive Intelligence">
-                <Suspense fallback={<WidgetSkeleton label="predictive intelligence" />}>
-                  <PredictiveIntelligenceWidget customer={selectedCustomer} />
-                </Suspense>
-              </WidgetErrorBoundary>
+                  {/* Predictive Intelligence */}
+                  <WidgetErrorBoundary widgetName="Predictive Intelligence">
+                    <Suspense fallback={<WidgetSkeleton label="predictive intelligence" />}>
+                      <PredictiveIntelligenceWidget customer={selectedCustomer} />
+                    </Suspense>
+                  </WidgetErrorBoundary>
+                </>
+              ) : (
+                <p className="text-sm text-gray-500 dark:text-gray-400">Select a customer to view details.</p>
+              )}
             </div>
           </div>
         </main>

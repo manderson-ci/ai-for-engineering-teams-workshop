@@ -210,7 +210,7 @@ export const CustomerHealthDisplay: React.FC<CustomerHealthDisplayProps> = ({
   }, [customer?.id, healthInput]);
 
   // --- Loading state ---
-  if (isLoading || (!customer && !result.error)) {
+  if (isLoading) {
     return <LoadingSkeleton />;
   }
 

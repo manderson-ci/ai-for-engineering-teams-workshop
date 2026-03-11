@@ -354,7 +354,7 @@ export const AlertsPanel: React.FC<AlertsPanelProps> = ({
   }, []);
 
   // --- Loading state ---
-  if (isLoading || (!customer && !error)) {
+  if (isLoading) {
     return <LoadingSkeleton />;
   }
 
